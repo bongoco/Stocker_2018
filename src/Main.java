@@ -1,53 +1,38 @@
-package com.company;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package stockanalysis;
+
 
 
 import java.util.Arrays;
 
-public class Main{
+public class Main extends NewJFrame{
+    
+    static int userRisk = 0;
+
             public static void main(String[] args){
-                class Company{
-                    public String companyName;
-                    public double range;
-                    public double dividend;
-                    public double ROE;
-                    public double profitMargin;
-                    public double DE;
-
-                    public Company(String companyName, double range,double dividend,double ROE,double profitMargin,double DE){
-                        this.range = range;
-                        this.dividend = dividend;
-                        this.ROE = ROE;
-                        this.profitMargin = profitMargin;
-                        this.DE = DE;
-                        this.companyName = companyName;
-                    }
-
-                    public double pro(){ // calculates pro, given a specific company's dividend, PE, profitMargin
-                        double pro = 0;
-                        pro += this.dividend*0.5;
-                        pro += 8.4/this.ROE;
-                        pro += this.profitMargin/13.82;
-
-                        return pro;
+//                 NewJFrame abc = new NewJFrame();
+          
+                
+                
+             
 
 
-                    }
-                    public double con(){ //calculates con, given a specific company's DE
-                        double con = 0;
-                        if(this.DE > 0.3){
-                            con += 2;
-                        } else if (this.DE == 0){
-                            con += 1;
-                        }
 
-                        return con;
-                    }
-                    public double net() { //calculates pro - con = net
-                        return this.pro()-this.con();
-                    }
+                    
+                  
+            }
+            
+	// write your code here
+    }
 
 
-                }
+
+
+/*
                 double max = 0;
                 int[] topFive = new int[5];
                 Company[] companies = new Company[10];
@@ -63,6 +48,9 @@ public class Main{
                 companies[7] = new Company("NVIDIA",115.06,0.6,58.25,36.21,22.75);
                 companies[8] = new Company("Exxon Mobil",17.14,4.08,11.21,7.95,21.3);
                 companies[9] = new Company("Nike",33.55,1,17.4,5.31,38.83);
+                
+                
+                
 
                 for(int f = 0; f < 5; f++){ //this for loop finds the top five companies based on their net score.
                     int index = 0;
@@ -159,6 +147,7 @@ public class Main{
                 public void RankNet() {
                     for(int f = 0; f < 10; f++){ //this for loop finds the top ten companies based on their net score.
                         int index = 0;
+                        
 
                         for(int i = 0; i < 3411; i++){
 
@@ -184,12 +173,4 @@ public class Main{
                 } else {
                     RankNet();
                 }
-
-
-
-
-
-            }
-	// write your code here
-    }
-
+*/
